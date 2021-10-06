@@ -1,7 +1,8 @@
+import PeoplePageContainer from '../PeoplePageContainer';
+
 import styles from './App.module.css';
-import { getApiResource } from '../../utils/network';
 
 const App = () => {
-    return null;
+    return <PeoplePageContainer />;
 };
 export default App;

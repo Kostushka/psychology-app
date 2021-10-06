@@ -1,11 +1,8 @@
 import axios from 'axios';
-
-const API_CHARACTERS = 'characters';
+import { API_ROOT } from '../constants/api';
 
 const instance = axios.create({
-    baseURL: 'https://www.breakingbadapi.com/api/',
-    // baseURL: 'https://www.anapioficeandfire.com/api',
-    // baseURL: 'https://swapi.dev/api/',
+    baseURL: API_ROOT,
 });
 export const getApiResource = async (url) => {
     try {
@@ -16,7 +13,3 @@ export const getApiResource = async (url) => {
         return false;
     }
 };
-
-(async () => {
-    await getApiResource(API_CHARACTERS);
-})();
