@@ -1,0 +1,10 @@
+.text {
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    color: var(--color-white);
+    font-size: var(--font-size-header);
+    line-height: 1.7;
+    text-shadow: 0 0 2px var(--color-white);
+}
