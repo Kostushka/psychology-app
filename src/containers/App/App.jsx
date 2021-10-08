@@ -1,4 +1,4 @@
-import PeoplePageContainer from '../PeoplePageContainer';
+import PeoplePageContainer from '@containers/PeoplePageContainer';
 
 import styles from './App.module.css';
 

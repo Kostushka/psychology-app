@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { API_CHARACTERS } from '../../constants/api';
-import { getApiResource } from '../../utils/network';
-import { withErrorApi } from '../../hoc-helper/withErrorApi';
-// import { getPeopleId } from '../../services/getPeopleData';
-// import { getPeopleImage } from '../../services/getPeopleData';
+import { API_CHARACTERS } from '@constants/api';
+import { getApiResource } from '@utils/network';
+import { withErrorApi } from '@hoc-helper/withErrorApi';
+// import { getPeopleId, getPeopleImage } from '@services/getPeopleData';
+import PeoplePage from '@components/PeoplePage';
+
 import styles from './PeoplePageContainer.module.css';
-import PeoplePage from '../../components/PeoplePage/PeoplePage';
 
 const PeoplePageContainer = ({ setErrorApi }) => {
     const [people, setPeople] = useState([]);
