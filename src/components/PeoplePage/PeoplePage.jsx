@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './PeoplePage.module.css';
 
 const PeoplePage = ({ people }) => {
@@ -17,6 +19,9 @@ const PeoplePage = ({ people }) => {
             ))}
         </ul>
     );
+};
+PeoplePage.propTypes = {
+    people: PropTypes.array,
 };
 
 export default PeoplePage;
