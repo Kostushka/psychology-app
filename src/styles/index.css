@@ -1,14 +1,27 @@
 :root {
     --color-white: #fff;
     --color-black: #000;
-    --color-dark-yellow: rgb(141, 55, 6);
+    --color-gray: rgb(63, 61, 61);
+    --color-dark-yellow: rgb(199, 196, 196);
 
     --spacing-medium: 20px;
+    --spacing-large: 30px;
+
+    --width-max: 1200px;
+
+    --transition: 0.4s;
+    --text-shadow-yellow: 0 0 2px var(--color-white),
+        0 0 40px var(--color-white);
 
     --border-radius-sm: 3px;
 
+    --font-bold: 600;
     --font-size-header: 26px;
+    --font-size-main: 16px;
     --font-family-main: sans-serif;
+
+    /* --theme-default-bgimg: url(@static/bg.jpg); */
+    --theme-default-header: rgb(233, 211, 185);
 }
 
 body {
@@ -17,4 +30,22 @@ body {
     padding: 0;
     background-color: var(--color-dark-yellow);
     font-family: var(--font-family-main);
+    font-size: var(--font-size-main);
+    /* background-image: var(--theme-default-bgimg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed; */
+}
+
+img {
+    display: block;
+}
+
+.header__text {
+    line-height: 1.7;
+    font-size: var(--font-size-header);
+    text-shadow: 0 0 2px var(--color-black);
+    color: var(--theme-default-header);
+    transition: var(--transition);
 }

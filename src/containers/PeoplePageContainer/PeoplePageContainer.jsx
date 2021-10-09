@@ -35,7 +35,12 @@ const PeoplePageContainer = ({ setErrorApi }) => {
         getResourse(API_CHARACTERS);
     }, []);
 
-    return <>{people && <PeoplePage people={people} />}</>;
+    return (
+        <>
+            <h1 className='header__text'>Навигация</h1>
+            {people && <PeoplePage people={people} />}
+        </>
+    );
 };
 
 PeoplePageContainer.propTypes = {
