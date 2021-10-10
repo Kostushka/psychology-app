@@ -1,0 +1,11 @@
+.img {
+    width: 450px;
+    margin: auto;
+    margin-top: 100px;
+}
+.text {
+    margin-top: 30px;
+    font-size: var(--font-size-subheader);
+    color: var(--color-gray);
+    text-align: center;
+}
