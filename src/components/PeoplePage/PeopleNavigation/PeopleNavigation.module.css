@@ -3,18 +3,10 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;
-    margin-top: var(--spacing-medium);
     padding: 0;
+    margin-top: var(--spacing-medium);
     list-style-type: none;
 }
 .list__item {
-    margin: var(--spacing-small);
-    border-radius: var(--border-radius-sm);
-}
-.button {
-    padding: 5px 10px;
-    background-color: var(--color-white);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
+    margin: var(--spacing-sm);
 }

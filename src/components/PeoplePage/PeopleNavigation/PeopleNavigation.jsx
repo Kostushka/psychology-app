@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import UiButton from '@ui/UiButton';
 import styles from './PeopleNavigation.module.css';
 
 const PeopleNavigation = ({ paginator, pageNumbers }) => {
@@ -7,11 +8,11 @@ const PeopleNavigation = ({ paginator, pageNumbers }) => {
         <ul className={styles.list__container}>
             {pageNumbers.map((number) => (
                 <li className={styles.list__item} key={number}>
-                    <Link
-                        to={`/people/?page=${number}`}
-                        onClick={() => paginator(number)}
-                    >
-                        <button className={styles.button}>{number}</button>
+                    <Link to={`/people/?page=${number}`}>
+                        <UiButton
+                            onClick={() => paginator(number)}
+                            number={number}
+                        />
                     </Link>
                 </li>
             ))}
