@@ -4,10 +4,12 @@
     --color-gray: rgb(63, 61, 61);
     --color-dark-yellow: rgb(199, 196, 196);
 
+    --spacing-ultrasm: 5px;
     --spacing-sm: 10px;
     --spacing-medium: 20px;
     --spacing-large: 30px;
 
+    --margin-list: 7px;
     --width-max: 1200px;
 
     --transition: 0.4s;
@@ -15,6 +17,7 @@
         0 0 40px var(--color-white);
 
     --border-radius-sm: 3px;
+    --border-radius-medium: 5px;
 
     --font-bold: 600;
     --font-size-header: 26px;

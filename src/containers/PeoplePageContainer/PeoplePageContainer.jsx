@@ -26,6 +26,7 @@ const PeoplePageContainer = ({ setErrorApi }) => {
                 // const img = getPeopleImage(id);
                 return {
                     id: char_id,
+                    // id,
                     name,
                     img,
                 };
@@ -39,6 +40,7 @@ const PeoplePageContainer = ({ setErrorApi }) => {
 
     useEffect(() => {
         getResourse(API_CHARACTERS);
+        // getResourse();
     }, []);
 
     const lastPeopleIndex = currentPage * countPeoplePage;
