@@ -1,8 +1,8 @@
 .wrapper {
-    margin-top: 45px;
+    margin-top: 35px;
 }
 .person__name {
-    font-size: var(--font-size-subheader);
+    font-size: var(--font-size-header);
     font-weight: var(--font-bold);
     color: var(--color-black);
 }

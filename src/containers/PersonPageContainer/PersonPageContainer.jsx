@@ -5,6 +5,7 @@ import { API_PERSON } from '@constants/api';
 import { withErrorApi } from '@hoc-helper/withErrorApi';
 import PersonInfo from '@components/PersonPage/PersonInfo';
 import PersonPhoto from '@components/PersonPage/PersonPhoto';
+import PersonLinkBack from '@components/PersonPage/PersonLinkBack';
 
 import styles from './PersonPageContainer.module.css';
 
@@ -51,6 +52,7 @@ const PersonPageContainer = ({ match, setErrorApi }) => {
 
     return (
         <>
+            <PersonLinkBack />
             <div className={styles.wrapper}>
                 <span className={styles.person__name}>{personName}</span>
                 <div className={styles.container}>

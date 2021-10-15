@@ -26,7 +26,6 @@
     text-shadow: none;
 }
 .list__container :global(a.active) {
-    border: 2px solid var(--color-gray);
-    color: var(--color-white);
-    text-shadow: var(--text-shadow-yellow);
+    border-bottom: 2px solid var(--color-black);
+    color: var(--color-black);
 }
