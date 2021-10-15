@@ -3,14 +3,17 @@ import cn from 'classnames';
 import '../index.css';
 import styles from './UiButton.module.css';
 
-const UiButton = ({ onClick, number, theme = 'light', classes }) => {
+const UiButton = ({ onClick, disabled, number, theme = 'light', classes }) => {
     return (
-        <button
-            onClick={onClick}
-            className={cn(styles.button, styles[theme], classes)}
-        >
-            {number}
-        </button>
+        <>
+            <button
+                onClick={onClick}
+                disabled={disabled}
+                className={cn(styles.button, styles[theme], classes)}
+            >
+                {number}
+            </button>
+        </>
     );
 };
 
@@ -19,6 +22,7 @@ UiButton.propTypes = {
     number: PropTypes.number,
     theme: PropTypes.string,
     classes: PropTypes.string,
+    disabled: PropTypes.bool,
 };
 
 export default UiButton;

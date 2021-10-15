@@ -10,8 +10,8 @@
     transition: var(--transition);
     cursor: pointer;
 }
-.button:focus,
-.button:focus:hover {
+.button:disabled,
+.button:disabled:hover {
     background-color: var(--color-white);
     color: var(--color-gray);
     cursor: auto;

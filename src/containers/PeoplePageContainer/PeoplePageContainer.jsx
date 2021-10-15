@@ -9,14 +9,21 @@ import { API_CHARACTERS } from '@constants/api';
 import PeopleNavigation from '@components/PeoplePage/PeopleNavigation';
 // import { API_ROOT } from '@constants/api';
 // import { API_PEOPLE } from '@constants/api';
-// import { useQueryParams } from '@hooks/useQueryParams';
+import { useQueryParams } from '@hooks/useQueryParams';
 
 // import styles from './PeoplePageContainer.module.css';
 
 const PeoplePageContainer = ({ setErrorApi }) => {
     const [people, setPeople] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [countPeoplePage] = useState(10);
+    const [countPeoplePage] = useState(5);
+
+    const query = useQueryParams();
+    const pageId = query.get('page');
+
+    useEffect(() => {
+        setCurrentPage(pageId);
+    }, [pageId]);
 
     const getResourse = async (url) => {
         const res = await getApiResource(url);
@@ -61,7 +68,11 @@ const PeoplePageContainer = ({ setErrorApi }) => {
     return (
         <>
             {people && <PeoplePage people={currentCountPeoplePage} />}
-            <PeopleNavigation pageNumbers={pageNumbers} paginator={paginator} />
+            <PeopleNavigation
+                pageNumbers={pageNumbers}
+                paginator={paginator}
+                id={pageId}
+            />
         </>
     );
 };
