@@ -2,7 +2,9 @@
     --color-white: #fff;
     --color-black: #000;
     --color-gray: rgb(63, 61, 61);
+    --color-red: rgb(156, 117, 114);
     --color-dark-yellow: rgb(182, 182, 187);
+    /* --color-dark-light: rgb(250, 203, 116); */
 
     --spacing-ultrasm: 5px;
     --spacing-sm: 10px;

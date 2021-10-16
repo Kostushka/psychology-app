@@ -1,25 +1,32 @@
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getApiResource } from '@utils/network';
 import { API_PERSON } from '@constants/api';
 import { withErrorApi } from '@hoc-helper/withErrorApi';
-import PersonInfo from '@components/PersonPage/PersonInfo';
-import PersonPhoto from '@components/PersonPage/PersonPhoto';
+import PersonPhoto from '@components/PersonPage/PersonPhoto'
 import PersonLinkBack from '@components/PersonPage/PersonLinkBack';
+import PersonDirection from '@components/PersonPage/PersonDirection';
+import UiLoading from '@ui/UiLoading';
 
 import styles from './PersonPageContainer.module.css';
+
+const PersonInfo = React.lazy(() =>
+    import('@components/PersonPage/PersonInfo')
+);
 
 const PersonPageContainer = ({ match, setErrorApi }) => {
     const [personInfo, setPersonInfo] = useState(null);
     const [personName, setPersonName] = useState(null);
     const [personPhoto, setPersonPhoto] = useState(null);
+    const [personDirection, setPersonDirection] = useState(null);
+
     useEffect(() => {
         (async () => {
             const id = match.params.id;
             const res = await getApiResource(`${API_PERSON}/${id}`);
             // const res = await getApiResource();
             if (res) {
-                // res.map(({ id, name, img, desc }) => {
+                // res.map(({ id, name, img, desc, info }) => {
                 //     const idPerson = Number(match.params.id);
                 //     if (id === idPerson) {
                 //         setPersonInfo([
@@ -30,18 +37,29 @@ const PersonPageContainer = ({ match, setErrorApi }) => {
                 //         ]);
                 //         setPersonName(name);
                 //         setPersonPhoto(img);
+                //         info.length && setPersonDirection(info);
                 //     }
                 // });
 
-                res.map(({ name, img, nickname, category, birthday }) => {
-                    setPersonInfo([
-                        { title: 'Nickname', data: nickname },
-                        { title: 'Category', data: category },
-                        { title: 'Birthday', data: birthday },
-                    ]);
-                    setPersonName(name);
-                    setPersonPhoto(img);
-                });
+                res.map(
+                    ({
+                        name,
+                        img,
+                        nickname,
+                        category,
+                        birthday,
+                        occupation,
+                    }) => {
+                        setPersonInfo([
+                            { title: 'Nickname', data: nickname },
+                            { title: 'Category', data: category },
+                            { title: 'Birthday', data: birthday },
+                        ]);
+                        setPersonName(name);
+                        setPersonPhoto(img);
+                        occupation.length && setPersonDirection(occupation);
+                    }
+                );
 
                 setErrorApi(false);
             } else {
@@ -60,7 +78,15 @@ const PersonPageContainer = ({ match, setErrorApi }) => {
                         personPhoto={personPhoto}
                         personName={personName}
                     />
-                    {personInfo && <PersonInfo personInfo={personInfo} />}
+
+                    {personInfo && (
+                        <React.Suspense fallback={<UiLoading />}>
+                            <PersonInfo personInfo={personInfo} />
+                        </React.Suspense>
+                    )}
+                    {personDirection && (
+                        <PersonDirection personDirection={personDirection} />
+                    )}
                 </div>
             </div>
         </>

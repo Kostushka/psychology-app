@@ -8,7 +8,7 @@
 //     GUIDE_EXTENSION,
 // } from '../constants/api';
 
-// const checkProtokol = (url) => {
+// export const checkProtokol = (url) => {
 //     if (url.indexOf(HTTPS) !== -1) {
 //         return HTTPS;
 //     }

@@ -1,0 +1,20 @@
+.wrapper {
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-medium);
+    width: 100%;
+}
+.list__container {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.list__item {
+    display: flex;
+}
+.title {
+    font-weight: var(--font-bold);
+    color: var(--color-white);
+    background-color: var(--color-red);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+}

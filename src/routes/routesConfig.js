@@ -20,11 +20,6 @@ const routesConfig = [
         component: PersonPageContainer,
     },
     {
-        path: '/not-found',
-        exact: true,
-        component: NotFoundPageContainer,
-    },
-    {
         path: '*',
         exact: false,
         component: NotFoundPageContainer,

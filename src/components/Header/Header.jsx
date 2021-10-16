@@ -13,11 +13,6 @@ const Header = () => {
                 <li>
                     <NavLink to='/people/?page=1'>Люди</NavLink>
                 </li>
-                <li>
-                    <NavLink to='/not-found' exact>
-                        Страница не найдена
-                    </NavLink>
-                </li>
             </ul>
         </div>
     );

@@ -13,7 +13,6 @@ const PersonInfo = ({ personInfo }) => {
                                     <span className={styles.item__title}>
                                         {title}
                                     </span>
-                                    :
                                     <div className={styles.item__text}>
                                         {data}
                                     </div>

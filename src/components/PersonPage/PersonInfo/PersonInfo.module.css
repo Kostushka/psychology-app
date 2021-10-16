@@ -15,7 +15,8 @@
     margin-bottom: var(--margin-list);
 }
 .item__title {
-    text-decoration: underline;
+    font-weight: var(--font-bold);
+    color: var(--color-gray);
 }
 .item__text {
     margin-top: var(--spacing-sm);

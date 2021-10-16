@@ -1,7 +1,7 @@
 .link {
     display: inline-flex;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: var(--font-bold);
     color: var(--color-white);
     text-decoration: none;
