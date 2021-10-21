@@ -23,7 +23,7 @@ const PeoplePageContainer = ({ setErrorApi }) => {
 
     useEffect(() => {
         setCurrentPage(pageId);
-    }, [pageId]);
+    }, []);
 
     const getResourse = async (url) => {
         const res = await getApiResource(url);
