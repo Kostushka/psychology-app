@@ -3,8 +3,8 @@
     --color-black: #000;
     --color-gray: rgb(63, 61, 61);
     --color-red: rgb(156, 117, 114);
-    --color-dark-yellow: rgb(182, 182, 187);
-    /* --color-dark-light: rgb(250, 203, 116); */
+    --color-light-gray: rgb(182, 182, 187);
+    --color-light: rgb(250, 203, 116);
 
     --spacing-ultrasm: 5px;
     --spacing-sm: 10px;
@@ -27,15 +27,27 @@
     --font-size-main: 16px;
     --font-family-main: sans-serif;
 
+    /* THEME */
     /* --theme-default-bgimg: url(@static/bg.jpg); */
-    --theme-default-header: rgb(233, 211, 185);
+
+    --theme-behaviorism-header: rgb(209, 108, 41);
+    --theme-psychoanalysis-header: rgb(187, 61, 38);
+    --theme-humanistic-header: rgb(251, 233, 211);
+
+    --theme-default-header: var(--theme-humanistic-header);
+
+    --theme-behaviorism-bgimg: rgb(250, 203, 116);
+    --theme-psychoanalysis-bgimg: #b497b8;
+    --theme-humanistic-bgimg: rgb(182, 182, 187);
+
+    --theme-default-bgimg: var(--theme-humanistic-bgimg);
 }
 
 body {
     /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
-    background-color: var(--color-dark-yellow);
+    background: var(--theme-default-bgimg);
     font-family: var(--font-family-main);
     font-size: var(--font-size-main);
     /* background-image: var(--theme-default-bgimg);
@@ -52,7 +64,7 @@ img {
 .header__text {
     line-height: 1.7;
     font-size: var(--font-size-header);
-    text-shadow: 0 0 2px var(--color-black);
+    /* text-shadow: 0 0 2px var(--color-black); */
     color: var(--theme-default-header);
     transition: var(--transition);
 }

@@ -21,7 +21,7 @@ const FavoritePageContainer = () => {
     }, []);
     return (
         <>
-            <h1 className='header__text'>Favorite Page</h1>
+            <h1 className='header__text'>Избранное</h1>
             {people.length ? (
                 <PeoplePage people={people} />
             ) : (
