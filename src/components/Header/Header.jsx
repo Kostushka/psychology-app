@@ -43,6 +43,9 @@ const Header = () => {
                 <li>
                     <NavLink to='/people/?page=1'>Люди</NavLink>
                 </li>
+                <li>
+                    <NavLink to='/search'>Поиск</NavLink>
+                </li>
             </ul>
             <Favorites />
         </div>

@@ -28,6 +28,7 @@
     width: 100%;
     text-align: center;
     font-size: var(--font-size-subheader);
+    background-color: rgb(255, 255, 255, 0.5);
 }
 .item__img {
     width: 100%;
@@ -38,15 +39,12 @@
 }
 
 .item__behav {
-    text-shadow: 0 0 5px var(--color-white);
     color: var(--color-behav);
 }
 .item__psy {
-    text-shadow: 0 0 5px var(--color-white);
     color: var(--color-psy);
 }
 .item__hum {
-    text-shadow: 0 0 5px var(--color-white);
     color: var(--color-hum);
 }
 

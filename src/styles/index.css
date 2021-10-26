@@ -43,8 +43,13 @@
     --theme-default-bgimg: var(--theme-humanistic-bgimg);
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 body {
-    /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
     background: var(--theme-default-bgimg);

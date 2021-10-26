@@ -3,7 +3,9 @@ export const API_ROOT = 'https://www.breakingbadapi.com/api/';
 // export const API_ROOT =
 //     'https://gist.githubusercontent.com/Kostushka/76ae7d98057b5b3800b50bf83a9925d9/raw/46241f972fc45cd9821692e3d0b05a3436fb930b/Psy-catalog.js';
 export const API_CHARACTERS = 'characters';
+export const API_SEARCH = '/?name=';
 export const API_PERSON = API_ROOT + API_CHARACTERS;
+export const API_PERSON_SEARCH = API_ROOT + API_CHARACTERS + API_SEARCH;
 
 // API SECOND
 
