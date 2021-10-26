@@ -1,9 +1,22 @@
 :root {
     --color-white: #fff;
     --color-gray: rgb(63, 61, 61);
+    --color-lightgray: rgb(109, 108, 108);
+    --color-blue: rgb(185, 194, 214);
 
     --font-size-sm: 14px;
+    --font-size-medium: 16px;
     --font-family-main: sans-serif;
     --font-bold: 600;
     --transition: 0.4s;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
 }
