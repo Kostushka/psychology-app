@@ -73,3 +73,26 @@ img {
     color: var(--theme-default-header);
     transition: var(--transition);
 }
+
+/* ---------------------------------------------- */
+/* SCROLL */
+/* ----------------------------------------------- */
+
+* {
+    scrollbar-color: var(--color-white) rgb(0, 0, 0, 0.3);
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-white);
+    border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0, 0.3);
+}
+::webkit-scrollbar-corner {
+    background-color: rgb(0, 0, 0, 0.3);
+}

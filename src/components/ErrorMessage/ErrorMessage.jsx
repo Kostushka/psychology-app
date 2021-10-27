@@ -1,3 +1,5 @@
+import UiVideo from '@ui/UiVideo';
+import src from './video/video.mp4';
 import styles from './ErrorMessage.module.css';
 
 const ErrorMessage = () => {
@@ -8,6 +10,7 @@ const ErrorMessage = () => {
                 <br />
                 Пожалуйста, зайдите позже.
             </p>
+            <UiVideo src={src} playbackRate={1.0} classes={styles.video} />
         </>
     );
 };

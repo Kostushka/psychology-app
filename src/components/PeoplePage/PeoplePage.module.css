@@ -6,7 +6,7 @@
     list-style-type: none;
 }
 .list__item {
-    width: 190px;
+    width: 185px;
     margin: var(--spacing-medium);
     border-radius: var(--border-radius-sm);
     background-color: var(--color-white);

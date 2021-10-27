@@ -46,6 +46,9 @@ const Header = () => {
                 <li>
                     <NavLink to='/search'>Поиск</NavLink>
                 </li>
+                <li>
+                    <NavLink to='/fail'>Подождите...</NavLink>
+                </li>
             </ul>
             <Favorites />
         </div>

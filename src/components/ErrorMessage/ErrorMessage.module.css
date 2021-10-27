@@ -8,3 +8,10 @@
     line-height: 1.7;
     text-shadow: 0 0 2px var(--color-white);
 }
+.video {
+    display: block;
+    margin: auto;
+    width: 400px;
+    margin-top: var(--spacing-large);
+    border-radius: var(--border-radius-medium);
+}

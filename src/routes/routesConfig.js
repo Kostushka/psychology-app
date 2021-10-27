@@ -4,6 +4,7 @@ import NotFoundPageContainer from '@containers/NotFoundPageContainer/NotFoundPag
 import PersonPageContainer from '@containers/PersonPageContainer';
 import FavoritePageContainer from '@containers/FavoritePageContainer';
 import SearchPageContainer from '@containers/SearchPageContainer';
+import ErrorMessage from '@components/ErrorMessage';
 
 const routesConfig = [
     {
@@ -25,6 +26,11 @@ const routesConfig = [
         path: '/search',
         exact: true,
         component: SearchPageContainer,
+    },
+    {
+        path: '/fail',
+        exact: true,
+        component: ErrorMessage,
     },
     {
         path: '/favorites',
