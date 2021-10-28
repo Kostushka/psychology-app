@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { getApiResource } from '@utils/network';
-import { API_PERSON } from '@constants/api';
+import { useSelector } from 'react-redux';
 import { withErrorApi } from '@hoc-helper/withErrorApi';
+import UiLoading from '@ui/UiLoading';
 import PersonPhoto from '@components/PersonPage/PersonPhoto';
 import PersonLinkBack from '@components/PersonPage/PersonLinkBack';
 import PersonDirection from '@components/PersonPage/PersonDirection';
-import UiLoading from '@ui/UiLoading';
+import { getApiResource } from '@utils/network';
 
 import styles from './PersonPageContainer.module.css';
-import { useSelector } from 'react-redux';
 
 const PersonInfo = React.lazy(() =>
     import('@components/PersonPage/PersonInfo')
@@ -28,45 +27,26 @@ const PersonPageContainer = ({ match, setErrorApi }) => {
     useEffect(() => {
         (async () => {
             const id = match.params.id;
-            const res = await getApiResource(`${API_PERSON}/${id}`);
-            // const res = await getApiResource();
+            const res = await getApiResource();
+
             storeDate[id] ? setPersonFavorite(true) : setPersonFavorite(false);
             setPersonId(id);
-            if (res) {
-                // res.map(({ id, name, img, desc, info }) => {
-                //     const idPerson = Number(match.params.id);
-                //     if (id === idPerson) {
-                //         setPersonInfo([
-                //             {
-                //                 title: 'Описание',
-                //                 data: desc,
-                //             },
-                //         ]);
-                //         setPersonName(name);
-                //         setPersonPhoto(img);
-                //         info.length && setPersonDirection(info);
-                //     }
-                // });
 
-                res.map(
-                    ({
-                        name,
-                        img,
-                        nickname,
-                        category,
-                        birthday,
-                        occupation,
-                    }) => {
+            if (res) {
+                res.map(({ id, name, img, desc, info }) => {
+                    const idPerson = Number(match.params.id);
+                    if (id === idPerson) {
                         setPersonInfo([
-                            { title: 'Nickname', data: nickname },
-                            { title: 'Category', data: category },
-                            { title: 'Birthday', data: birthday },
+                            {
+                                title: 'Описание',
+                                data: desc,
+                            },
                         ]);
                         setPersonName(name);
                         setPersonPhoto(img);
-                        occupation.length && setPersonDirection(occupation);
+                        info.length && setPersonDirection(info);
                     }
-                );
+                });
 
                 setErrorApi(false);
             } else {

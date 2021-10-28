@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import icon from './img/close.svg';
+
 import '../index.css';
 import styles from './UiInput.module.css';
 

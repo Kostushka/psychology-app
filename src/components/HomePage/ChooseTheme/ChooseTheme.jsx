@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import { useTheme } from '@context/ThemeProvider';
 import {
+    useTheme,
     THEME_BEHAVIORISM,
     THEME_HUMANISTIC,
     THEME_PSYCHOANALYSIS,

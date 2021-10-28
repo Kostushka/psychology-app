@@ -28,7 +28,6 @@
     --font-family-main: sans-serif;
 
     /* THEME */
-    /* --theme-default-bgimg: url(@static/bg.jpg); */
 
     --theme-behaviorism-header: rgb(209, 108, 41);
     --theme-psychoanalysis-header: rgb(187, 61, 38);
@@ -55,11 +54,6 @@ body {
     background: var(--theme-default-bgimg);
     font-family: var(--font-family-main);
     font-size: var(--font-size-main);
-    /* background-image: var(--theme-default-bgimg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-attachment: fixed; */
 }
 
 img {
@@ -69,7 +63,6 @@ img {
 .header__text {
     line-height: 1.7;
     font-size: var(--font-size-header);
-    /* text-shadow: 0 0 2px var(--color-black); */
     color: var(--theme-default-header);
     transition: var(--transition);
 }

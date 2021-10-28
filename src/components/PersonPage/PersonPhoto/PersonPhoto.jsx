@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { setPersonToFavorite, removePersonToFavorite } from '@store/actions';
 import favoriteFill from './img/favorite-fill.svg';
 import favorite from './img/favorite.svg';
+
 import styles from './PersonPhoto.module.css';
 
 const PersonPhoto = ({

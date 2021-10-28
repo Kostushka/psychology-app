@@ -1,17 +1,10 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-
 import { withErrorApi } from '@hoc-helper/withErrorApi';
 import PeoplePage from '@components/PeoplePage';
-// import { getPeopleId, getPeopleImage } from '@services/getPeopleData';
-import { getApiResource } from '@utils/network';
-import { API_CHARACTERS } from '@constants/api';
 import PeopleNavigation from '@components/PeoplePage/PeopleNavigation';
-// import { API_ROOT } from '@constants/api';
-// import { API_PEOPLE } from '@constants/api';
 import { useQueryParams } from '@hooks/useQueryParams';
-
-// import styles from './PeoplePageContainer.module.css';
+import { getApiResource } from '@utils/network';
 
 const PeoplePageContainer = ({ setErrorApi }) => {
     const [people, setPeople] = useState([]);
@@ -25,15 +18,12 @@ const PeoplePageContainer = ({ setErrorApi }) => {
         setCurrentPage(pageId);
     }, []);
 
-    const getResourse = async (url) => {
-        const res = await getApiResource(url);
+    const getResourse = async () => {
+        const res = await getApiResource();
         if (res) {
-            const peopleList = res.map(({ char_id, name, img }) => {
-                // const id = getPeopleId(url);
-                // const img = getPeopleImage(id);
+            const peopleList = res.map(({ id, name, img }) => {
                 return {
-                    id: char_id,
-                    // id,
+                    id,
                     name,
                     img,
                 };
@@ -46,8 +36,7 @@ const PeoplePageContainer = ({ setErrorApi }) => {
     };
 
     useEffect(() => {
-        getResourse(API_CHARACTERS);
-        // getResourse();
+        getResourse();
     }, []);
 
     const lastPeopleIndex = currentPage * countPeoplePage;

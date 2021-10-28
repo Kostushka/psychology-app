@@ -1,20 +1,23 @@
 import { NavLink } from 'react-router-dom';
-import { useTheme } from '@context/ThemeProvider';
 import { useEffect, useState } from 'react';
 import {
+    useTheme,
     THEME_BEHAVIORISM,
     THEME_HUMANISTIC,
     THEME_PSYCHOANALYSIS,
 } from '@context/ThemeProvider';
+import Favorites from '@components/Favorites';
 import behavTheme from './img/behavior.svg';
 import humanTheme from './img/humanistic.svg';
 import psychoTheme from './img/psychoanalys.svg';
-import Favorites from '@components/Favorites';
+
 import styles from './Header.module.css';
 
 const Header = () => {
     const [icon, setIcon] = useState(humanTheme);
+
     const isTheme = useTheme();
+
     useEffect(() => {
         switch (isTheme.theme) {
             case THEME_BEHAVIORISM:
@@ -31,9 +34,11 @@ const Header = () => {
                 setIcon(humanTheme);
         }
     }, [isTheme]);
+
     return (
         <div className={styles.container}>
             <img className={styles.logo} src={icon} alt='Психология' />
+
             <ul className={styles.list__container}>
                 <li>
                     <NavLink to='/' exact>
@@ -41,15 +46,25 @@ const Header = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/people/?page=1'>Люди</NavLink>
+                    <NavLink to='/people/?page=1'>Психологи</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/search'>Поиск</NavLink>
+                    <NavLink to='/search' exact>
+                        Поиск
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/fail'>Подождите...</NavLink>
+                    <NavLink to='/fail' exact>
+                        Ошибка
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/not-found' exact>
+                        Нет страницы
+                    </NavLink>
                 </li>
             </ul>
+
             <Favorites />
         </div>
     );

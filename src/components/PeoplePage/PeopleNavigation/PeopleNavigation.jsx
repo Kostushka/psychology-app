@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import UiButton from '@ui/UiButton';
+
 import styles from './PeopleNavigation.module.css';
 
 const PeopleNavigation = ({ paginator, pageNumbers, id }) => {

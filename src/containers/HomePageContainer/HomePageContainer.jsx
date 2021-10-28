@@ -1,5 +1,4 @@
 import ChooseTheme from '@components/HomePage/ChooseTheme';
-import styles from './HomePageContainer.module.css';
 
 const HomePageContainer = () => {
     return (

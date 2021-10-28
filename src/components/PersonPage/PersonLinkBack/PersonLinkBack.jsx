@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import goBackIcon from './img/back.svg';
+
 import styles from './PersonLinkBack.module.css';
 
 const PersonLinkBack = () => {

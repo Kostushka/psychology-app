@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import { useRef, useEffect } from 'react';
 import cn from 'classnames';
+
 import styles from './UiVideo.module.css';
 
 const UiVideo = ({ src, playbackRate = 1.0, classes }) => {
     const videoRef = useRef(null);
+
     useEffect(() => {
         videoRef.current.playbackRate = playbackRate;
     }, []);
+
     return (
         <>
             <video

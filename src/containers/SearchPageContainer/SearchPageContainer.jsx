@@ -1,68 +1,46 @@
 import PropTypes from 'prop-types';
-import { useEffect, useState, useCallback } from 'react';
-import { getApiResource } from '@utils/network';
-import { API_PERSON_SEARCH } from '@constants/api';
+import { useState } from 'react';
 import { withErrorApi } from '@hoc-helper/withErrorApi';
-import { debounce } from 'lodash';
-import SearchPageInfo from '@components/SearchPage/SearchPageInfo';
 import UiInput from '@ui/UiInput';
+import SearchPageInfo from '@components/SearchPage/SearchPageInfo';
+import { getApiResource } from '@utils/network';
 
 import styles from './SearchPageContainer.module.css';
 
 const SearchPageContainer = ({ setErrorApi }) => {
     const [inputSearchValue, setInputSearchValue] = useState('');
     const [people, setPeople] = useState([]);
-    // const [peopleSearch, setPeopleSearch] = useState([]);
+    const [peopleSearch, setPeopleSearch] = useState([]);
 
-    const getResponce = async (param) => {
-        const res = await getApiResource(API_PERSON_SEARCH + param);
-        // const getResponce = async () => {
-        //     const res = await getApiResource();
+    const getResponce = async () => {
+        const res = await getApiResource();
         if (res) {
-            const peopleList = res.map(({ char_id, name, img }) => {
-                return {
-                    id: char_id,
-                    name,
-                    img,
-                };
-            });
+            if (people) {
+                const filterPeople = people.filter((p) => {
+                    return p.name
+                        .toLowerCase()
+                        .includes(inputSearchValue.toLowerCase());
+                });
+                const peopleList = filterPeople.map(({ id, name, img }) => {
+                    return {
+                        id,
+                        name,
+                        img,
+                    };
+                });
+                setPeopleSearch(peopleList);
+            }
+            setPeople(res);
 
-            // if (people) {
-            //     const filterPeople = people.filter((p) => {
-            //         return p.name
-            //             .toLowerCase()
-            //             .includes(inputSearchValue.toLowerCase());
-            //     });
-            //     const peopleList = filterPeople.map(({ id, name, img }) => {
-            //         return {
-            //             id,
-            //             name,
-            //             img,
-            //         };
-            //     });
-            //     setPeopleSearch(peopleList);
-            // }
-            // setPeople(res);
-            setPeople(peopleList);
             setErrorApi(false);
         } else {
             setErrorApi(true);
         }
     };
 
-    useEffect(() => {
-        getResponce('');
-    }, []);
-
-    const debouncedGetResponse = useCallback(
-        debounce((value) => getResponce(value), 300),
-        []
-    );
-
     const handleInputChange = (value) => {
         setInputSearchValue(value);
-        // getResponce();
-        debouncedGetResponse(value);
+        getResponce();
     };
     return (
         <>
@@ -74,8 +52,7 @@ const SearchPageContainer = ({ setErrorApi }) => {
                 classes={styles.input__search}
             />
 
-            <SearchPageInfo people={people} />
-            {/* <SearchPageInfo peopleSearch={peopleSearch} /> */}
+            <SearchPageInfo peopleSearch={peopleSearch} />
         </>
     );
 };

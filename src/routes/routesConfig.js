@@ -33,6 +33,11 @@ const routesConfig = [
         component: ErrorMessage,
     },
     {
+        path: '/not-found',
+        exact: true,
+        component: NotFoundPageContainer,
+    },
+    {
         path: '/favorites',
         exact: true,
         component: FavoritePageContainer,

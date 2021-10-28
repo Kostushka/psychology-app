@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import PeoplePage from '@components/PeoplePage/PeoplePage';
+import PeoplePage from '@components/PeoplePage';
+
 import styles from './FavoritePageContainer.module.css';
 
 const FavoritePageContainer = () => {
     const [people, setPeople] = useState([]);
-    console.log(people);
+
     const storeDate = useSelector((state) => state.favoriteReducer);
+
     useEffect(() => {
         const arr = Object.entries(storeDate);
         if (arr.length) {
