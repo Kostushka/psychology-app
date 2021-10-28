@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/psychology-app/static/css/main.0803afa6.chunk.css",
+    "main.js": "/psychology-app/static/js/main.24ad8550.chunk.js",
+    "main.js.map": "/psychology-app/static/js/main.24ad8550.chunk.js.map",
+    "runtime-main.js": "/psychology-app/static/js/runtime-main.50feddef.js",
+    "runtime-main.js.map": "/psychology-app/static/js/runtime-main.50feddef.js.map",
+    "static/js/2.26d7f389.chunk.js": "/psychology-app/static/js/2.26d7f389.chunk.js",
+    "static/js/2.26d7f389.chunk.js.map": "/psychology-app/static/js/2.26d7f389.chunk.js.map",
+    "static/css/3.b4a2fcdb.chunk.css": "/psychology-app/static/css/3.b4a2fcdb.chunk.css",
+    "static/js/3.2eefa737.chunk.js": "/psychology-app/static/js/3.2eefa737.chunk.js",
+    "static/js/3.2eefa737.chunk.js.map": "/psychology-app/static/js/3.2eefa737.chunk.js.map",
+    "index.html": "/psychology-app/index.html",
+    "static/css/3.b4a2fcdb.chunk.css.map": "/psychology-app/static/css/3.b4a2fcdb.chunk.css.map",
+    "static/css/main.0803afa6.chunk.css.map": "/psychology-app/static/css/main.0803afa6.chunk.css.map",
+    "static/js/2.26d7f389.chunk.js.LICENSE.txt": "/psychology-app/static/js/2.26d7f389.chunk.js.LICENSE.txt",
+    "static/media/back.de676df6.svg": "/psychology-app/static/media/back.de676df6.svg",
+    "static/media/behav.0f64bf72.jpg": "/psychology-app/static/media/behav.0f64bf72.jpg",
+    "static/media/behavior.ecca1f9e.svg": "/psychology-app/static/media/behavior.ecca1f9e.svg",
+    "static/media/close.17a94979.svg": "/psychology-app/static/media/close.17a94979.svg",
+    "static/media/favorite-fill.b0a6ce34.svg": "/psychology-app/static/media/favorite-fill.b0a6ce34.svg",
+    "static/media/favorite.3d177801.svg": "/psychology-app/static/media/favorite.3d177801.svg",
+    "static/media/folder.eb1e4e9b.svg": "/psychology-app/static/media/folder.eb1e4e9b.svg",
+    "static/media/human.fe6346a5.jpg": "/psychology-app/static/media/human.fe6346a5.jpg",
+    "static/media/humanistic.ba10530a.svg": "/psychology-app/static/media/humanistic.ba10530a.svg",
+    "static/media/loader-black.339cb393.svg": "/psychology-app/static/media/loader-black.339cb393.svg",
+    "static/media/loader-red.4b906310.svg": "/psychology-app/static/media/loader-red.4b906310.svg",
+    "static/media/loader-white.96e5f465.svg": "/psychology-app/static/media/loader-white.96e5f465.svg",
+    "static/media/not-found.773a9bf6.png": "/psychology-app/static/media/not-found.773a9bf6.png",
+    "static/media/psycho.c4832d61.jpg": "/psychology-app/static/media/psycho.c4832d61.jpg",
+    "static/media/psychoanalys.6d772d97.svg": "/psychology-app/static/media/psychoanalys.6d772d97.svg",
+    "static/media/video.f14436e3.mp4": "/psychology-app/static/media/video.f14436e3.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50feddef.js",
+    "static/js/2.26d7f389.chunk.js",
+    "static/css/main.0803afa6.chunk.css",
+    "static/js/main.24ad8550.chunk.js"
+  ]
+}
