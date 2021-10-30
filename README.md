@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# 🔰 Psychology Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🐇 Links
 
-## Available Scripts
+-   `Project` https://kostushka.github.io/psychology-app
+-   `Repository` https://github.com/Kostushka/psychology-app
+-   `StoryBook` https://kostushka.github.io/psychology-app/storybook
 
-In the project directory, you can run:
+## 🐀 Available Scripts and Commands
 
-### `yarn start`
+```bash
+# Install
+npm i                    # install dependencies
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+# General
+npm run start            # run app in the development mode
+npm run storybook        # run storybook
+npm run deploy           # deploy app on Github Pages
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+# Deploy (part of "deploy" script)
+npm run build            # builds the app for production
+npm run build-storybook  # storybook build
+npm run build-gh-pages   # deploy on Github Pages
+```
 
-### `yarn test`
+## 🐕 Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### React.js
 
-### `yarn build`
+-   Использование `create-react-app` для разворачивания приложения
+-   Хук `useState` - состояние в функциональных компонентах
+-   Хук `useEffect` для side effects в функциональных компонентах
+-   Context API (хук `useContext`) - для смены темы
+-   Рефы и DOM (хук `useRef`) - для изменения скорости видео
+-   Создание собственного хука - для получения id из url
+-   Фрагменты - для использования обертки без создания узла в DOM
+-   Паттерн `Higher-Order Component` - для повторного использования логики в разных компонентах (в проекте : обработка ошибки запроса)
+-   Обработка событий
+-   Подключение CSS : `css-modules`, библиотека `classnames` для добавления нескольких стилей к элементу
+-   Списки и ключи, `Reconciliation Algorithm`
+-   Отложенная загрузка компонентов `React.lazy()`
+-   Библиотека `prop-types` - для валидации props
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### React Router
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   Базовый роутинг (библиотеки `react-router`, `react-router-dom`) : `BrowserRouter`, `Route`, `NavLink`, `Switch`
+-   Обработка страницы 404 (Not Found)
+-   Хук `useLocation` - для определения url, который забивает пользователь (в проекте : показываем для какого url совпадений не найдено)
+-   Хук `useHistory` - для перемещения по истории браузера (в проекте : кнопка "назад")
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Redux
 
-### `yarn eject`
+-   Хук `useSelector` - для получения данных из store (в проекте : для просмотра данных в избранном)
+-   Хук `useDispatch` - для добавления данных в store (в проекте : для добавления данных в избранное)
+-   Отслеживание состояния store с `redux-devtools-extension`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### General
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   Задание Alias (библиотека `react-app-rewire-alias`) - псевдонимы для путей
+-   Деплой приложения на GitHub Pages (библиотека `gh-pages`)
+-   Создание Ui-Kit, публикация в `@storybook` - для визуальных компонентов, которые можно переиспользовать
+-   Библиотека `lodash` с готовыми функциями - для удаления объекта из state (функция omit)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### JavaScript
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   Методы работы с массивами: `map`, `filter`, `forEach`
+-   Асинхронность : `Async Functions`
+-   Деструктуризация массивов и объектов
+-   Тернарные операторы
+-   Работа с Local Storage - для сохранения данных в избранном при перезагрузке страницы
+-   Работа с API с использованием `axios, axios.create()`
